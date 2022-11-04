@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- empieza fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <!-- termina fuente -->
+    <link rel="stylesheet" href="css/styles-dist.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="main">
+        <h1 id="title" class="title">Formulario de encuesta freeCodeCamp</h1>
+        <p id="description" class="description">Gracias por tomarse el tiempo para ayudarnos a mejorar la plataforma.</p>
+        <form id="survey-form" class="survey-form">
+            <div class="survey-form__data">
+
+                <label for="name" id="name-label" class="survey-form__label survey-form__label-data">
+                    Nombre
+                    <input type="text" name="name" placeholder="Ingresa tu nombre" id="name" class="survey-form__input survey-form__input-data" required>
+                </label>
+
+                <label for="email" id="email-label" class="survey-form__label survey-form__label-data">
+                    Email
+                    <input type="email" name="email" placeholder="Ingresa tu Email" id="email" class="survey-form__input survey-form__input-data" required>
+                </label>
+
+                <label for="number" id="number-label"  class="survey-form__label survey-form__label-data">
+                    Edad <span class="label__clue">(Opcional)</span>
+                    <input type="number" name="number" placeholder="Ingresa tu edad" id="number" 
+                    min="12" max="99" class="survey-form__input survey-form__input-data">
+                </label>
+            </div>
+            <div class="survey-form__role survey-form__section">
+                <p class="survey-form__paragraph">
+                    ¿Qué opción describe mejor a lo que se dedica?
+                </p>
+                <select name="role" id="dropdown" class="survey-form__select">
+                    <option disabled selected value> Elija una opción </option>
+                    <option value="estudiante">Estudiante</option> 
+                    <option value="tiempoCompleto">Trabajador de tiempo completo</option> 
+                    <option value="medioTiempo">Trabajador de medio tiempo</option>
+                    <option value="noDecir">Prefiero no decir</option> 
+                    <option value="otro">Otro</option> 
+                </select>
+            </div>
+            <div class="survey-form__recommend survey-form__section">
+                <p class="survey-form__paragraph">
+                    ¿Recomendaría freeCodeCamp a un amigo(a)?
+                </p>
+                <label class="survey-form__label" >
+                    <input type="radio" name="recomended" value="definitivamente" class="survey-form__input survey-form__input-radio" checked> 
+                    Definitivamente
+                </label>
+               
+                <label class="survey-form__label">
+                    <input type="radio" name="recomended" value="quizas" class="survey-form__input survey-form__input-radio"> 
+                    Quizás
+                </label>
+                
+                <label class="survey-form__label">
+                    <input type="radio" name="recomended" value="inseguro" class="survey-form__input survey-form__input-radio"> 
+                    No estoy seguro(a)
+                </label>
+            </div>
+            <div class="survey-form__feature survey-form__section">
+                <p class="survey-form__paragraph">
+                    ¿Cuál es tu función favorita de freeCodeCamp?
+                </p>
+                <select name="feature" class="survey-form__select">
+                    <option disabled selected value> Elija una opción </option>
+                    <option value="desafios">Desafíos</option> 
+                    <option value="proyectos">Proyectos</option> 
+                    <option value="comunidad">Comunidad</option>
+                    <option value="openSource">Open Source</option> 
+                </select>
+            </div>
+            <div class="survey-form__improve survey-form__section">
+                <p class="survey-form__paragraph">
+                    ¿Qué te gustaría ver mejorado? <span class="label__clue">(Marque todo lo que corresponda)</span>
+                    
+                    <label class="survey-form__label">
+                        <input type="checkbox" name="preferencia" value="proyectosFrontEnd" class="survey-form__input survey-form__input-checkbox">
+                        Proyectos Front-end
+                    </label>
+
+                    <label  class="survey-form__label">
+                        <input type="checkbox" name="preferencia" value="proyectosBackEnd" class="survey-form__input survey-form__input-checkbox"> 
+                        Proyectos Back-end
+                    </label>
+
+                    <label class="survey-form__label">
+                        <input type="checkbox" name="preferencia" value="visualizacionDatos" class="survey-form__input survey-form__input-checkbox"> 
+                        Visualización de datos
+                    </label>
+
+                    <label class="survey-form__label">
+                        <input type="checkbox" name="preferencia" value="desafios" class="survey-form__input survey-form__input-checkbox"> 
+                        Desafíos
+                    </label>
+                    
+                    <label class="survey-form__label">
+                        <input type="checkbox" name="preferencia" value="comunidadOpenSource" class="survey-form__input survey-form__input-checkbox"> 
+                        Comunidad Open Source
+                    </label>
+
+                    <label class="survey-form__label">
+                        <input type="checkbox" name="preferencia" value="ayudaGitter" class="survey-form__input survey-form__input-checkbox"> 
+                        Salas de ayuda de Gitter
+                    </label>
+
+                    <label class="survey-form__label">
+                        <input type="checkbox" name="preferencia" value="videos" class="survey-form__input survey-form__input-checkbox"> 
+                        Vídeos
+                    </label>
+
+                    <label class="survey-form__label">
+                        <input type="checkbox" name="preferencia" value="meetups" class="survey-form__input survey-form__input-checkbox"> 
+                        Encuentros en la ciudad
+                    </label>
+
+                    <label class="survey-form__label">
+                        <input type="checkbox" name="preferencia" value="wiki" class="survey-form__input survey-form__input-checkbox"> 
+                        Wiki
+                    </label>
+
+                    <label class="survey-form__label">
+                        <input type="checkbox" name="preferencia" value="foro" class="survey-form__input survey-form__input-checkbox"> 
+                        Foro
+                    </label>
+
+                    <label class="survey-form__label"></label>
+                        <input type="checkbox" name="preferencia" value="cursosAdicionales" class="survey-form__input survey-form__input-checkbox"> 
+                        Cursos adicionales
+                    </label>
+                </p>
+            </div>
+            <div class="survey-form__comments survey-form__section">
+                <p class="survey-form__paragraph">
+                    ¿Algún comentario o sugerencia?
+                </p>
+                <textarea name="comentarios" id="comments" placeholder="Ingrese aquí su comentario..." class="survey-form__input survey-form__input-textArea" rows="5" ></textarea>
+            </div>
+            <button id="submit" class="survey-form__button">
+                Enviar
+            </button>
+        </form>
+    </main>
+</body>
+</html>
